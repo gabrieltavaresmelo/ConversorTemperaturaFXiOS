@@ -1,0 +1,23 @@
+<project name="JavaFX4iOS">
+
+	<target name="clean">
+		<mkdir dir="target"></mkdir>
+		<delete dir="target" includes="**/*" includeemptydirs="true"></delete>
+	</target>
+
+	<target name="runOnDevice">
+		<exec command="mvn robovm:ios-device">
+		</exec>
+	</target>
+
+	<target name="runOniPadSimulator">
+		<exec command="mvn robovm:ipad-sim">
+		</exec>
+	</target>
+
+	<target name="runOniPhoneSimulator">
+		<exec command="mvn robovm:iphone-sim">
+		</exec>
+	</target>
+
+</project>
